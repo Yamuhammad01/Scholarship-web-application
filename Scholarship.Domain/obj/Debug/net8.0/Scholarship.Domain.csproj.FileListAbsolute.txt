@@ -1,0 +1,12 @@
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\bin\Debug\net8.0\Scholarship.Domain.deps.json
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\bin\Debug\net8.0\Scholarship.Domain.dll
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\bin\Debug\net8.0\Scholarship.Domain.pdb
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\Scholarship.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\Scholarship.Domain.AssemblyInfoInputs.cache
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\Scholarship.Domain.AssemblyInfo.cs
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\Scholarship.Domain.csproj.CoreCompileInputs.cache
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\Scholarship.Domain.sourcelink.json
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\Scholarship.Domain.dll
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\refint\Scholarship.Domain.dll
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\Scholarship.Domain.pdb
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Scholarship.Domain\obj\Debug\net8.0\ref\Scholarship.Domain.dll

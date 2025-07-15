@@ -1,0 +1,382 @@
+[
+  {
+    "ContainingType": "Scholarship.Api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Scholarship.Application.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.CertificatesController",
+    "Method": "UploadCertificate",
+    "RelativePath": "api/Certificates/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FileType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.CertificatesController",
+    "Method": "ViewCertificate",
+    "RelativePath": "api/Certificates/view/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.ParentInfoController",
+    "Method": "AddFathersInformation",
+    "RelativePath": "api/ParentInfo/AddFathersInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fathersDTO",
+        "Type": "Scholarship.Application.DTOs.ParentInfoDTO.FathersDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.ParentInfoController",
+    "Method": "AddMothersInformation",
+    "RelativePath": "api/ParentInfo/AddMothersInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mothersDTO",
+        "Type": "Scholarship.Application.DTOs.ParentInfoDTO.MothersDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.ParentInfoController",
+    "Method": "NextOfKinInformation",
+    "RelativePath": "api/ParentInfo/AddNextOfKinInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nextOfKinDTO",
+        "Type": "Scholarship.Application.DTOs.ParentInfoDTO.NextOfKinDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.ParentInfoController",
+    "Method": "GetFathersInfoById",
+    "RelativePath": "api/ParentInfo/GetFathersInfoById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.ParentInfoController",
+    "Method": "Update",
+    "RelativePath": "api/ParentInfo/UpdateFathersInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fathersDTO",
+        "Type": "Scholarship.Application.DTOs.ParentInfoDTO.FathersDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.ParentInfoController",
+    "Method": "UpdateMothersInformation",
+    "RelativePath": "api/ParentInfo/UpdateMothersInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mothersDTO",
+        "Type": "Scholarship.Application.DTOs.ParentInfoDTO.MothersDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.ParentInfoController",
+    "Method": "UpdateNextOfKinInformation",
+    "RelativePath": "api/ParentInfo/UpdateNextOfKinInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "nextOfKinDTO",
+        "Type": "Scholarship.Application.DTOs.ParentInfoDTO.NextOfKinDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ScholarshipController",
+    "Method": "Delete",
+    "RelativePath": "api/Scholarship/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ScholarshipController",
+    "Method": "Create",
+    "RelativePath": "api/Scholarship/CreateRegistration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "student",
+        "Type": "Scholarship.Application.DTOs.RegistrationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ScholarshipController",
+    "Method": "GetAll",
+    "RelativePath": "api/Scholarship/getAllRegistration",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ScholarshipController",
+    "Method": "GetById",
+    "RelativePath": "api/Scholarship/getRegistrationbyId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ScholarshipController",
+    "Method": "Update",
+    "RelativePath": "api/Scholarship/UpdateRegistration",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "student",
+        "Type": "Scholarship.Application.DTOs.RegistrationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ScholarshipController",
+    "Method": "WhoAmI",
+    "RelativePath": "api/Scholarship/whoami",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.StudentProfileController",
+    "Method": "AddAcademicInformation",
+    "RelativePath": "api/StudentProfile/AddAcademicInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "academicLevelDTO",
+        "Type": "Scholarship.Application.DTOs.AcademicLevelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.StudentProfileController",
+    "Method": "AddBiodata",
+    "RelativePath": "api/StudentProfile/Createbiodata",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "biodata",
+        "Type": "Scholarship.Application.DTOs.BiodataDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.StudentProfileController",
+    "Method": "GetBiodataById",
+    "RelativePath": "api/StudentProfile/getBiodatabyId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.StudentProfileController",
+    "Method": "UpdateAcademicInformation",
+    "RelativePath": "api/StudentProfile/UpdateAcademicInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "academicLevelDTO",
+        "Type": "Scholarship.Application.DTOs.AcademicLevelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.ProfileController.StudentProfileController",
+    "Method": "UpdateBiodata",
+    "RelativePath": "api/StudentProfile/UpdateBiodata/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Scholarship.Application.DTOs.BiodataDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Scholarship.Api.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Scholarship.Api.WeatherForecast, Scholarship.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

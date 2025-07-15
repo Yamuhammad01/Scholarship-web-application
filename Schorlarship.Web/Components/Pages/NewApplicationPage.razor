@@ -1,0 +1,52 @@
+﻿@page "/new-application"
+@using Schorlarship.ViewModels
+@rendermode InteractiveServer
+
+<h3>WELCOME TO MOHAMMED IDRIS SCHORLARSHIP APPLICATION PAGE</h3>
+<h4>Fill all the provided fileds and click on the submit button.</h4>
+
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">Application Form</div>
+    </div>
+    <div class="card-body">
+       
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <label for="firstName">First Name:</label>
+                    <InputText required="true" class="form-control" @bind-Value="registration.FirstName" placeholder="Enter your first name"></InputText>
+            </div>
+            <div class="col-md-4">
+                <label for="firstName">Middle Name:</label>
+                <InputText required="true" class="form-control" @bind-Value="registration.MiddleName" placeholder="Enter your middle name"></InputText>
+            </div>
+            <div class="col-md-4">
+                <label for="firstName">Last Name:</label>
+                <InputText required="true" class="form-control" @bind-Value="registration.LastName" placeholder="Enter your last name"></InputText>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <label for="firstName">Phone Number:</label>
+                <InputText required="true" class="form-control" @bind-Value="registration.PhoneNumber" placeholder="Enter your Phone Number"></InputText>
+            </div>
+            <div class="col-md-4">
+                <label for="firstName">Email Address:</label>
+                <InputText required="true" class="form-control" @bind-Value="registration.Email" placeholder="Enter your Email Adress"></InputText>
+            </div>
+            <div class="col-md-4">
+                <label for="firstName">Gender:</label>
+                <InputText required="true" class="form-control" @bind-Value="registration.Gender" placeholder="Enter your Gender"></InputText>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button type="submit" @onclick="()=>SubmitRegistration(registration)" class="btn btn-success btn-lg">Submit</button>
+        </div>
+
+    </div>
+</div>
+
+
