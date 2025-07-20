@@ -28,12 +28,7 @@ namespace Scholarship.Api.Controllers
             return User.FindFirst(ClaimTypes.NameIdentifier)?.Value!;
         }
 
-        [HttpGet("whoami")]
-        public IActionResult WhoAmI()
-        {
-            var userId = GetUserId();
-            return Ok(new { userId });
-        }
+       
         [Authorize]
         [HttpGet("getAllRegistration")]
         public async Task<IActionResult> GetAll() => Ok(await _service.GetAllStudentsAsync());
@@ -73,7 +68,7 @@ namespace Scholarship.Api.Controllers
             return Ok(new { Message = "Registration successful" });
         }
 
-        [Authorize]
+      
         [HttpPut("UpdateRegistration")]
         public async Task<IActionResult> Update(int id, [FromBody] RegistrationDTO student)
         {
@@ -82,7 +77,7 @@ namespace Scholarship.Api.Controllers
 
             return Ok();
         }
-        [Authorize]
+       
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

@@ -20,11 +20,14 @@ using Microsoft.Exchange.WebServices.Data;
 using AutoMapper;
 using Scholarship.Application.AutoMapper;
 using System.Text.Json.Serialization;
+using Microsoft.Graph.Models;
+using System;
+using Microsoft.AspNetCore.Mvc;
 
 
 
 
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = args,
     WebRootPath = "wwwroot" // Or any custom folder
@@ -48,10 +51,14 @@ builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddScoped<IBiodataRepository, BiodataRepository>();
 builder.Services.AddScoped<IParentInfoRepository, ParentInfoRepository>();
 builder.Services.AddScoped<IParentInfoService, ParentInfoService>();
+builder.Services.AddScoped<ILogoutService, LogoutService>();
+
 
 builder.Services.AddScoped<GenerateJwtToken>();
 builder.Services.AddScoped<ProfileService>();
 builder.Services.AddScoped<ParentInfoService>();
+builder.Services.AddScoped<LogoutService>();
+
 //builder.WebHost.UseWebRoot("wwwroot");
 
 builder.Services.AddScoped<ICertificateService>(provider =>
@@ -70,11 +77,18 @@ builder.Services.AddSingleton(provider =>
 
 //builder.Services.AddScoped<IJwtService, JwtService>();
 
+builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
 
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
-builder.Services.AddAuthentication(options =>
+
+
+    #region Add Authentication
+    builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -83,6 +97,8 @@ builder.Services.AddAuthentication(options =>
 {
     var jwtSettings = builder.Configuration.GetSection("JwtSettings");
     
+    options.SaveToken = false;
+
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -97,6 +113,10 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]!))
     };
 });
+
+#endregion
+
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Scholarship API", Version = "v1" });
@@ -133,9 +153,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders(); builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+ builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IStudentService, RegistrationService>();
 
 
@@ -150,6 +168,13 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 //app.UseMiddleware<Scholarship.Api.Middleware.ExceptionHandlingMiddleware>();
+# region Config CORS
+app.UseCors();
+#endregion
+
+
+
+
 app.UseAuthentication();
 
 app.UseAuthorization();
@@ -167,5 +192,38 @@ app.UseStaticFiles(); // Needed to serve uploaded files
 
 
 app.MapControllers();
+app
+    .MapGroup("/api");
+    app.MapIdentityApi<IdentityUser>();
+
+
+
+app.MapPost("/api/signup", async (
+    UserManager<IdentityUser> userManager,
+    [FromBody] UserRegistrationModel userRegistrationModel
+    ) =>
+  {
+    IdentityUser user = new IdentityUser()
+    {
+        UserName = userRegistrationModel.Email,
+        Email = userRegistrationModel.Email,
+       // FullName = userRegistrationModel.FullName,
+    };
+    var result = await userManager.CreateAsync(
+        user,
+        userRegistrationModel.Password);
+
+    if (result.Succeeded)
+        return Results.Ok(result);
+    else
+        return Results.BadRequest(result);
+   });
 
 app.Run();
+ 
+public class UserRegistrationModel
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public string FullName { get; set; }
+}

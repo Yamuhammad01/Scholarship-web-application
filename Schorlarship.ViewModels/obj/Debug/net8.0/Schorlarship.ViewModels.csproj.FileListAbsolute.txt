@@ -1,0 +1,12 @@
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\bin\Debug\net8.0\Schorlarship.ViewModels.deps.json
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\bin\Debug\net8.0\Schorlarship.ViewModels.dll
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\bin\Debug\net8.0\Schorlarship.ViewModels.pdb
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\Schorlarship.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\Schorlarship.ViewModels.AssemblyInfoInputs.cache
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\Schorlarship.ViewModels.AssemblyInfo.cs
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\Schorlarship.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\Schorlarship.ViewModels.sourcelink.json
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\Schorlarship.ViewModels.dll
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\refint\Schorlarship.ViewModels.dll
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\Schorlarship.ViewModels.pdb
+C:\Users\idris\Desktop\WorkSpace\ScholarshipApplication\Schorlarship.ViewModels\obj\Debug\net8.0\ref\Schorlarship.ViewModels.dll

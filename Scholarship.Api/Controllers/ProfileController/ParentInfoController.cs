@@ -42,6 +42,8 @@ namespace Scholarship.Api.Controllers.ProfileController
             await _parentInfoService.UpdateFathersInfoAsync(id, fathersDTO);
             return NoContent();
         }
+
+       //  [ApiController]
         [HttpPost("AddMothersInformation")]
         public async Task<IActionResult> AddMothersInformation([FromBody] MothersDTO mothersDTO)
         {

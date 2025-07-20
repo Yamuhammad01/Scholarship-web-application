@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Schorlarship.Web/1.0.0": {
+        "dependencies": {
+          "Schorlarship.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "Schorlarship.Web.dll": {}
+        }
+      },
+      "Schorlarship.ViewModels/1.0.0": {
+        "runtime": {
+          "Schorlarship.ViewModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Schorlarship.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Schorlarship.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

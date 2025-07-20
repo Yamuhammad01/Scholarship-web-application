@@ -4,7 +4,6 @@ using Scholarship.Application.Interfaces;
 using Scholarship.Application.DTOs;
 using Scholarship.Application.Services;
 using Scholarship.Infrastructure.Persistence;
-using Scholarship.Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Graph;
 using Microsoft.Graph.Models;
@@ -25,12 +24,13 @@ namespace Scholarship.Api.Controllers
         //private readonly ApplicationDbContext _context;
         private readonly ProfileService _profileService;
         private readonly GenerateJwtToken _jwtTokenGenerator;
+        private readonly LogoutService _logoutService;
         // private readonly UserManager<IdentityUser> _userManager;
         //private readonly SignInManager<IdentityUser> _signInManager;
         
         //private string userName;
 
-        public AuthController(ProfileService profileService, GenerateJwtToken generateJwtToken)
+        public AuthController(ProfileService profileService, GenerateJwtToken generateJwtToken, LogoutService logoutService)
         {
            
             //_authService1 = authService;
@@ -40,6 +40,7 @@ namespace Scholarship.Api.Controllers
           
             _jwtTokenGenerator = generateJwtToken;
             _profileService = profileService;
+            _logoutService = logoutService;
         }
 
         //public object s { get; private set; }
@@ -77,6 +78,15 @@ namespace Scholarship.Api.Controllers
                     userInfoFromDb.Email
                 }
             });
+        }
+
+
+        // POST: api/Auth/Logout
+        [HttpPost("Logout")]
+        public IActionResult Logout()
+        {
+            _logoutService.Logout();
+            return Ok(new { message = "Logged out successfully" });
         }
 
     }
